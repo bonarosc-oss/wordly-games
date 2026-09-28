@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.wordly.jumbly",
+    "sha256_cert_fingerprints":
+    ["57:C5:86:20:B3:B0:22:FE:2D:A8:DB:A4:41:CA:8F:CE:E2:32:40:59:55:E0:CA:54:23:C4:71:D7:BC:30:6B:97"]
+  }
+}]
