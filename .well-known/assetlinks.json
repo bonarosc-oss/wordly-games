@@ -1,9 +1,11 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.wordly.jumbly",
-    "sha256_cert_fingerprints":
-    ["7F:FA:09:46:51:FF:76:13:7A:F0:E5:BF:6E:E6:75:75:C4:81:67:13:29:39:3C:F6:47:58:4A:78:AA:36:4C:DF"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wordly.jumbly",
+      "sha256_cert_fingerprints":
+        ["7F:FA:09:46:51:FF:76:13:7A:F0:E5:BF:6E:E6:75:75:C4:81:67:13:29:39:3C:F6:47:58:4A:78:AA:36:4C:DF"]
+    }
   }
-}]
+]
