@@ -3,132 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordly Games</title>
+    <title>Wordly Games | Andygrams & Daily Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            slate: '#2c3e50', // Matches standard logo background
+                            green: '#143820', // Matches daily challenge background
+                            yellow: '#ffc107', // Matches the letter tiles
+                            yellowHover: '#e0a800'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            /* Update these hex codes with the exact Andygrams colors */
-            --primary-color: #2b5797; /* Main branding color */
-            --secondary-color: #e3a21a; /* Accent color */
-            --background-color: #f4f6f9;
-            --text-color: #333333;
-            --card-bg: #ffffff;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            width: 100%;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        h1, h2, h3 {
+            font-family: 'Nunito', sans-serif;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 1px;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 3rem 1rem;
-            max-width: 800px;
-            width: 100%;
-            flex-grow: 1;
-            box-sizing: border-box;
-        }
-
-        .game-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--secondary-color);
-            text-align: center;
-            transition: transform 0.2s ease;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .game-title {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        .game-desc {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        .play-store-btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background-color 0.2s ease;
-        }
-
-        .play-store-btn:hover {
-            background-color: var(--secondary-color);
-            color: #000;
-        }
-
-        footer {
-            padding: 1.5rem;
-            text-align: center;
-            width: 100%;
-            color: #777;
-            font-size: 0.9rem;
+        .app-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <header>
-        <h1>Wordly Games</h1>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <!-- Simple generic logo icon for Wordly Games -->
+                <svg class="w-8 h-8 text-brand-slate" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 2h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z"/>
+                </svg>
+                <span class="text-2xl font-display font-extrabold text-gray-900 tracking-tight">Wordly Games</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#andygrams" class="text-gray-600 hover:text-brand-slate font-semibold transition-colors">Andygrams</a>
+                <a href="#daily-challenge" class="text-gray-600 hover:text-brand-green font-semibold transition-colors">Daily Challenge</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <div class="game-card">
-            <h2 class="game-title">Andygrams Anagram Word Puzzles</h2>
-            <p class="game-desc">A premium anagram puzzle experience. Unscramble the letters, find the hidden words, and train your brain with thousands of carefully crafted levels.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.wordly.jumbly" class="play-store-btn" target="_blank" rel="noopener noreferrer">View on Google Play</a>
-        </div>
+    <main class="flex-grow">
+        
+        <section id="andygrams" class="bg-brand-slate text-white py-20 lg:py-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    
+                    <!-- Text Content -->
+                    <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <span class="uppercase tracking-widest text-brand-yellow font-bold text-sm mb-3">The Classic Experience</span>
+                        <h1 class="text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight">
+                            Master the <br />Anagrams
+                        </h1>
+                        <p class="text-lg lg:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
+                            Dive into endless word-building fun with Andygrams. Arrange the beautiful tactile tiles to discover hidden words, build your vocabulary, and challenge your brain at your own pace.
+                        </p>
+                        
+                        <!-- Google Play Button -->
+                        <a href="https://play.google.com/store/apps/details?id=com.wordly.jumbly" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-3 bg-brand-yellow hover:bg-brand-yellowHover text-gray-900 font-bold text-lg px-8 py-4 rounded-full transition-transform hover:scale-105 shadow-lg">
+                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.341l-10.46-6.04c-.381-.22-.843-.22-1.224 0-.381.22-.619.634-.619 1.074v12.081c0 .44.238.854.619 1.074.19.11.405.165.62.165.216 0 .431-.055.621-.165l10.443-6.035c.381-.22.619-.634.619-1.074s-.238-.854-.619-1.08zm-9.303 3.633v-8.666l7.505 4.333-7.505 4.333z"/>
+                            </svg>
+                            Get it on Google Play
+                        </a>
+                        <p class="text-sm text-gray-400 mt-4">Free to play • Endless puzzles</p>
+                    </div>
 
-        <div class="game-card">
-            <h2 class="game-title">Andygrams Daily Challenge</h2>
-            <p class="game-desc">Test your vocabulary every single day. A daily variant featuring fresh puzzle seeds and a growing community of word puzzle enthusiasts.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.wordly.jumblydailychallenge" class="play-store-btn" target="_blank" rel="noopener noreferrer">View on Google Play</a>
-        </div>
+                    <!-- Image Content -->
+                    <div class="lg:w-1/2 relative w-full max-w-lg mx-auto">
+                        <div class="absolute inset-0 bg-blue-400 opacity-20 blur-3xl rounded-full"></div>
+                        <img src="Andygrams_Logo_2.jpg" alt="Andygrams Logo with colorful letter tiles" class="relative z-10 w-full h-auto rounded-3xl app-shadow border-4 border-white/10" onerror="this.src='https://placehold.co/800x600/2c3e50/ffffff?text=Andygrams+Logo'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="daily-challenge" class="bg-brand-green text-white py-20 lg:py-32 overflow-hidden border-t-8 border-brand-yellow">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+                    
+                    <!-- Text Content -->
+                    <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <span class="uppercase tracking-widest text-brand-yellow font-bold text-sm mb-3">Fresh Every Day</span>
+                        <h2 class="text-5xl lg:text-6xl font-display font-extrabold mb-6 leading-tight">
+                            Your Daily <br />Brain Workout
+                        </h2>
+                        <p class="text-lg lg:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
+                            Ready for a routine? Andygrams Daily Challenge brings you one curated, perfectly balanced puzzle every single day. Compete with friends and maintain your streak!
+                        </p>
+                        
+                        <!-- Google Play Button -->
+                        <a href="https://play.google.com/store/apps/details?id=com.wordly.jumblydailychallenge" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-3 bg-white hover:bg-gray-100 text-brand-green font-bold text-lg px-8 py-4 rounded-full transition-transform hover:scale-105 shadow-lg">
+                            <svg class="w-7 h-7 text-brand-green" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.341l-10.46-6.04c-.381-.22-.843-.22-1.224 0-.381.22-.619.634-.619 1.074v12.081c0 .44.238.854.619 1.074.19.11.405.165.62.165.216 0 .431-.055.621-.165l10.443-6.035c.381-.22.619-.634.619-1.074s-.238-.854-.619-1.08zm-9.303 3.633v-8.666l7.505 4.333-7.505 4.333z"/>
+                            </svg>
+                            Get it on Google Play
+                        </a>
+                        <p class="text-sm text-green-300 mt-4">1 New Puzzle Daily • Track your streaks</p>
+                    </div>
+
+                    <!-- Image Content -->
+                    <div class="lg:w-1/2 relative w-full max-w-lg mx-auto">
+                        <div class="absolute inset-0 bg-green-500 opacity-20 blur-3xl rounded-full"></div>
+                        <img src="andygrams_logo_2.jpg" alt="Andygrams Daily Challenge Logo with letter tiles" class="relative z-10 w-full h-auto rounded-3xl app-shadow border-4 border-white/10" onerror="this.src='https://placehold.co/800x600/143820/ffffff?text=Daily+Challenge+Logo'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        &copy; 2026 Wordly Games. All rights reserved.
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex items-center gap-2 mb-6 opacity-75">
+                <svg class="w-6 h-6 text-brand-yellow" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 2h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z"/>
+                </svg>
+                <span class="text-xl font-display font-bold text-white tracking-tight">Wordly Games</span>
+            </div>
+            <p class="mb-4">&copy; 2026 Wordly Games. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">Contact Support</a>
+            </div>
+        </div>
     </footer>
-
-</body>
-</html>
