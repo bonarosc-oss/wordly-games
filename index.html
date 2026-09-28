@@ -44,19 +44,23 @@
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <svg class="w-8 h-8 text-brand-slate" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 2h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z"/>
-                </svg>
-                <span class="text-2xl font-display font-extrabold text-gray-900 tracking-tight">Wordly Games</span>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#andygrams" class="text-gray-600 hover:text-brand-slate font-semibold transition-colors">Andygrams</a>
-                <a href="#daily-challenge" class="text-gray-600 hover:text-brand-green font-semibold transition-colors">Daily Challenge</a>
-            </nav>
-        </div>
-    </header>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <!-- The logo and title are now a clickable link back to home -->
+        <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <svg class="w-8 h-8 text-brand-slate" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 2h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z"/>
+            </svg>
+            <span class="text-2xl font-display font-extrabold text-gray-900 tracking-tight">Wordly Games</span>
+        </a>
+        
+        <nav class="hidden md:flex space-x-6">
+            <a href="#andygrams" class="text-gray-600 hover:text-brand-slate font-semibold transition-colors">Andygrams</a>
+            <a href="#daily-challenge" class="text-gray-600 hover:text-brand-green font-semibold transition-colors">Daily Challenge</a>
+            <!-- The new About link added to your right-side navigation -->
+            <a href="about.html" class="text-gray-600 hover:text-gray-900 font-semibold transition-colors">About</a>
+        </nav>
+    </div>
+</header>
 
     <main class="flex-grow">
         
