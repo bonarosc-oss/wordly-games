@@ -17,9 +17,9 @@
                     },
                     colors: {
                         brand: {
-                            slate: '#2c3e50', // Matches standard logo background
-                            green: '#143820', // Matches daily challenge background
-                            yellow: '#ffc107', // Matches the letter tiles
+                            slate: '#2c3e50',
+                            green: '#143820',
+                            yellow: '#ffc107',
                             yellowHover: '#e0a800'
                         }
                     }
@@ -46,7 +46,6 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <!-- Simple generic logo icon for Wordly Games -->
                 <svg class="w-8 h-8 text-brand-slate" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm3 2h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z"/>
                 </svg>
@@ -84,6 +83,16 @@
                             Get it on Google Play
                         </a>
                         <p class="text-sm text-gray-400 mt-4">Premium Game • Endless puzzles • Optional timer & more!</p>
+
+                        <!-- Expandable SEO Section -->
+                        <div class="mt-6 flex flex-col items-center lg:items-start w-full max-w-xl">
+                            <button onclick="toggleSEO('seo-andygrams', this)" class="text-brand-yellow hover:text-white underline text-sm font-semibold focus:outline-none transition-colors">
+                                Read More About Andygrams
+                            </button>
+                            <div id="seo-andygrams" class="hidden mt-4 text-sm text-gray-300 leading-relaxed bg-black/20 p-4 rounded-lg border border-white/10">
+                                Andygrams is the premier anagram word puzzle game designed to test your vocabulary and cognitive skills. Solve challenging word jumbles, improve your spelling, and enjoy endless hours of brain-training entertainment. Perfect for fans of classic word games, our premium app offers an ad-free experience, offline play, and intuitive drag-and-drop mechanics. Download Andygrams today and become a master of anagrams!
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Image Content -->
@@ -118,6 +127,16 @@
                             Get it on Google Play
                         </a>
                         <p class="text-sm text-green-300 mt-4">Free • 1 New Puzzle Daily • Track your streaks</p>
+
+                        <!-- Expandable SEO Section -->
+                        <div class="mt-6 flex flex-col items-center lg:items-start w-full max-w-xl">
+                            <button onclick="toggleSEO('seo-daily', this)" class="text-brand-yellow hover:text-white underline text-sm font-semibold focus:outline-none transition-colors">
+                                Read More About Daily Challenge
+                            </button>
+                            <div id="seo-daily" class="hidden mt-4 text-sm text-green-100 leading-relaxed bg-black/20 p-4 rounded-lg border border-white/10">
+                                Step up to the Andygrams Daily Challenge, the ultimate daily word puzzle for anagram enthusiasts. Every day brings a brand new, handcrafted word scramble to solve. Compete against the clock, track your daily streaks, and share your scores with friends. Fast, free, and highly addictive, this daily brain teaser is the perfect quick mental workout to start your morning.
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Image Content -->
@@ -147,3 +166,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Expansion Script -->
+    <script>
+        function toggleSEO(id, button) {
+            const content = document.getElementById(id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                button.textContent = button.textContent.replace('Read More', 'Read Less');
+            } else {
+                content.classList.add('hidden');
+                button.textContent = button.textContent.replace('Read Less', 'Read More');
+            }
+        }
+    </script>
+</body>
+</html>
