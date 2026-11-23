@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and updates from Wordly Games.">
+    <title>News | Wordly Games</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            slate: '#2c3e50',
+                            green: '#143820',
+                            ricochet: '#000000',
+                            yellow: '#ffc107',
+                            yellowHover: '#e0a800'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3 {
+            font-family: 'Nunito', sans-serif;
+        }
+        .app-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-brand-slate text-white flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <!-- Added flex-wrap and gap-y-4 to handle mobile screen stacking gracefully -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap justify-between items-center gap-y-4">
+            
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                <img src="wordly_games_logo.jpeg" alt="Wordly Games" class="h-9 w-auto">
+            </a>
+            
+            <nav class="flex flex-wrap items-center w-full md:w-auto justify-center gap-4 md:gap-6 text-sm md:text-base">
+                <a href="index.html#andygrams" class="text-gray-600 hover:text-brand-slate font-semibold transition-colors">Andygrams</a>
+                <a href="index.html#daily-challenge" class="text-gray-600 hover:text-brand-green font-semibold transition-colors">Daily Challenge</a>
+                <a href="index.html#ricochet" class="text-gray-600 hover:text-black font-semibold transition-colors">Ricochet</a>
+                <a href="news.html" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-3.5 py-1.5 rounded-lg transition-colors">News</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 font-semibold transition-colors">About</a>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main class="flex-grow bg-brand-slate text-white py-12 lg:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Side-by-Side Images -->
+            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-8 mb-12">
+                <img src="Andygrams.jpg" alt="Andygrams Logo with colorful letter tiles" class="h-32 sm:h-48 md:h-56 w-auto rounded-2xl app-shadow border-4 border-white/10" onerror="this.src='https://placehold.co/800x600/2c3e50/ffffff?text=Andygrams+Logo'">
+                <img src="Andygrams_Daily.jpg" alt="Andygrams Daily Challenge Logo with letter tiles" class="h-32 sm:h-48 md:h-56 w-auto rounded-2xl app-shadow border-4 border-white/10" onerror="this.src='https://placehold.co/800x600/143820/ffffff?text=Daily+Challenge+Logo'">
+            </div>
+
+            <!-- Editable News Content -->
+            <div class="max-w-3xl mx-auto space-y-6 text-white">
+                <h1 class="text-4xl lg:text-5xl font-display font-extrabold text-center">
+                    Wordly Games News
+                </h1>
+
+                <p class="text-lg leading-relaxed">
+                    Wordly Games was created in 2025 with the goal of creating an anagram game that was reminiscent of the ones we remember from the early days of Android phones. In the process of researching modern games we noticed that most word games in the Google Play Store were full of ads or had in-app purchases. We made the decision early that we would not bog our game down with any of that and decided to create a premium experience that was owned free and clear by its users. In February of 2026 we officially released Andygrams Anagram Word Puzzles, and it is now enjoyed by players in 32 U.S states and 8 countries!	
+                </p>
+
+ 	        <p class="text-lg leading-relaxed">
+ 		    But we noticed that selling a premium game - even at just $2.99 - was a pretty steep barrier to entry for a lot of people. It is much more difficult to market a paid app than it is a free one, so we made a minor pivot and introduced Andygrams Daily Challenge. This allowed players to try the Andygrams experience for free in a fun, daily puzzle version. But it also meant we needed to have ads and a way to remove them so that players had an option for which type of play they wanted - paid or free. So our original goal of being a company creating ad-free games went right out the window! We did limit Andygrams Daily Challenge to one ad that can be skipped, and an additional optional ad that isn't necessary for gameplay at all. This turned out to be a great solution, and we understand why modern game developers make the decisions that they do.
+                </p>
+
+<!-- Ricochet Image -->
+<div class="flex justify-center py-4">
+    <img src="ricochet.jpg" alt="Ricochet Game Logo" class="h-32 sm:h-48 md:h-56 w-auto rounded-2xl app-shadow border-4 border-white/15" onerror="this.src='https://placehold.co/800x600/000000/ffffff?text=Ricochet+Logo'">
+</div>
+
+                <p class="text-lg leading-relaxed">
+                    Enter Ricochet. Another one of our plans was to concentrate strictly on word games. (Hence the name - Wordly Games) But that plan also changed one day when going through an old phone that had the game Orbital by Bitforge Studios on it. 
+
+ </p>
+                <p class="text-lg leading-relaxed">
+Orbital was a fantastic game that was inspired by the free Flash game Gimme Friction Baby by Wouter Visser. This type of game has sadly been missing from the Google Play Store for some time now, so we decided that we would take a shot at creating a new version of this classic physics game - along with a few new twists! Ricochet will be launching soon, and it will be completely free to play Normal mode with minimal skippable ads. Three additional modes, along with game options such as Zen mode, will be able to be unlocked for just $2.99. Google Play Games is also integrated, letting you earn achievements and Play Points! 
+                </p>
+
+<!-- Facebook Callout -->
+<div class="bg-black/20 border border-white/10 rounded-xl p-6 text-center space-y-4">
+    <p class="text-lg leading-relaxed text-white">
+        Follow us on Facebook for information, game updates, and upcoming tips and tricks for our new Ricochet game!
+    </p>
+    <a href="https://www.facebook.com/people/Andygrams-Anagram-Word-Puzzles-and-Daily-Challenge/61586759099743/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#166FE5] text-white font-semibold px-5 py-2.5 rounded-lg transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        Follow on Facebook
+    </a>
+</div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white text-gray-600 py-12 text-center border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <!-- Logo container -->
+            <div class="mb-6">
+                <a href="index.html" class="inline-block hover:opacity-80 transition-opacity">
+                    <img src="wordly_games_logo.png" alt="Wordly Games" class="h-10 w-auto">
+                </a>
+            </div>
+            
+            <p class="mb-4">&copy; 2026 Wordly Games. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="https://wordly-games.com/privacy_statement.htm" class="hover:text-gray-900 transition-colors">Privacy Policy</a>
+                <a href="mailto:andygramswordpuzzles@gmail.com" class="hover:text-gray-900 transition-colors">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
